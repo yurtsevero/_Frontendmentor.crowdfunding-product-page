@@ -1,0 +1,51 @@
+main {
+  width: 327px;
+  height: 284px;
+  padding: 24px;
+  margin: -56px auto 56px auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  @include displayFlex(column, space-around, center);
+  text-align: center;
+  position: relative;
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding: 24px;
+  }
+  p {
+    font-size: 0.875rem;
+    color: #7a7a7a;
+    padding: 0px 0px 24px 0px;
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .main__footer {
+    width: 279px;
+    @include displayFlex(row, space-between, center);
+  }
+  button {
+    width: 214px;
+    height: 56px;
+    color: #fff;
+    border: none;
+    border-radius: 33.5px;
+    background-color: #3cb3ab;
+    outline: none;
+    cursor: pointer;
+  }
+  span {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #2f2f2f;
+    color: #b1b1b1;
+    @include displayFlex(row, center, center);
+    cursor: pointer;
+  }
+}
