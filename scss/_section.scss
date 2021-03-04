@@ -24,6 +24,7 @@ section {
 .product {
   width: 279px;
   font-size: 0.875rem;
+  margin-bottom: 24px;
   @include centerContainer();
   &__card {
     width: inherit;
@@ -33,17 +34,26 @@ section {
   }
   &__titel {
     font-weight: medium;
+    &--selectionModal {
+      margin-left: 0.7rem;
+    }
   }
   &__info {
     display: block;
     color: #3cb3ab;
     margin-top: 10px;
     margin-bottom: 22px;
+
+    &--selectionModal {
+      margin-left: 0.7rem;
+      margin-bottom: 0;
+    }
   }
   &__desc {
-    margin-bottom: 24px;
+    margin: 24px 0px;
     line-height: 24px;
   }
+
   &__days {
     @include displayFlex(row, start, center);
     margin-bottom: 24px;
@@ -64,6 +74,16 @@ section {
     &--outofstock {
       background-color: rgba(47, 47, 47, 0.5);
     }
+  }
+  &__checkbox {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  &__checkboxContainer {
+    @include displayFlex(row, start, center);
   }
 }
 

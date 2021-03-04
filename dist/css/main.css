@@ -222,6 +222,7 @@ section {
 .product {
   width: 279px;
   font-size: 0.875rem;
+  margin-bottom: 24px;
   margin: 0 auto;
 }
 
@@ -237,6 +238,10 @@ section {
   font-weight: medium;
 }
 
+.product__titel--selectionModal {
+  margin-left: 0.7rem;
+}
+
 .product__info {
   display: block;
   color: #3cb3ab;
@@ -244,8 +249,13 @@ section {
   margin-bottom: 22px;
 }
 
+.product__info--selectionModal {
+  margin-left: 0.7rem;
+  margin-bottom: 0;
+}
+
 .product__desc {
-  margin-bottom: 24px;
+  margin: 24px 0px;
   line-height: 24px;
 }
 
@@ -284,6 +294,32 @@ section {
 
 .product__button--outofstock {
   background-color: rgba(47, 47, 47, 0.5);
+}
+
+.product__checkbox {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.product__checkboxContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card {
