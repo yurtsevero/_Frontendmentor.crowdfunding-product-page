@@ -205,6 +205,7 @@ section {
 
 .about {
   color: #7a7a7a;
+  position: relative;
 }
 
 .about__titel {
@@ -217,6 +218,12 @@ section {
   font-size: 0.875rem;
   line-height: 24px;
   margin-bottom: 20px;
+}
+
+.about__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
 }
 
 .product {
@@ -296,17 +303,27 @@ section {
   background-color: rgba(47, 47, 47, 0.5);
 }
 
-.product__checkbox {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+.product__radio {
   width: 24px;
   height: 24px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  outline: none;
 }
 
-.product__checkboxContainer {
+.product__radio:active .product__radio__checkmark {
+  background-color: #3cb3ab;
+}
+
+.product__checkmark {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #3cb3ab;
+}
+
+.product__radioContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

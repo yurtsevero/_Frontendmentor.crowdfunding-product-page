@@ -9,7 +9,7 @@ section {
 }
 .about {
   color: #7a7a7a;
-
+  position: relative;
   &__titel {
     font-size: 1.125rem;
     margin-bottom: 22px;
@@ -20,12 +20,19 @@ section {
     line-height: 24px;
     margin-bottom: 20px;
   }
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+  }
 }
 .product {
   width: 279px;
   font-size: 0.875rem;
   margin-bottom: 24px;
+
   @include centerContainer();
+
   &__card {
     width: inherit;
     &--outofstock {
@@ -75,14 +82,26 @@ section {
       background-color: rgba(47, 47, 47, 0.5);
     }
   }
-  &__checkbox {
-    appearance: none;
+  &__radio {
     width: 24px;
     height: 24px;
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.15);
+    outline: none;
+
+    &:active &__checkmark {
+      background-color: #3cb3ab;
+    }
   }
-  &__checkboxContainer {
+  &__checkmark {
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #3cb3ab;
+  }
+
+  &__radioContainer {
     @include displayFlex(row, start, center);
   }
 }
