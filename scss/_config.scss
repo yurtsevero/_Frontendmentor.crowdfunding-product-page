@@ -17,3 +17,12 @@ body {
   justify-content: $jcontent;
   align-items: $aitems;
 }
+@mixin centerContainer {
+  margin: 0 auto;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}

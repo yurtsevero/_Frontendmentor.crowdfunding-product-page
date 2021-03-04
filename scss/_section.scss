@@ -1,0 +1,104 @@
+section {
+  width: 327px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  @include centerContainer();
+  margin-bottom: 24px;
+  padding: 24px;
+}
+.about {
+  color: #7a7a7a;
+
+  &__titel {
+    font-size: 1.125rem;
+    margin-bottom: 22px;
+    font-weight: normal;
+  }
+  &__p {
+    font-size: 0.875rem;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+}
+.product {
+  width: 279px;
+  font-size: 0.875rem;
+  @include centerContainer();
+  &__card {
+    width: inherit;
+    &--outofstock {
+      opacity: 0.5;
+    }
+  }
+  &__titel {
+    font-weight: medium;
+  }
+  &__info {
+    display: block;
+    color: #3cb3ab;
+    margin-top: 10px;
+    margin-bottom: 22px;
+  }
+  &__desc {
+    margin-bottom: 24px;
+    line-height: 24px;
+  }
+  &__days {
+    @include displayFlex(row, start, center);
+    margin-bottom: 24px;
+  }
+  &__digit {
+    color: #000000;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+  &__button {
+    width: 157px;
+    height: 48px;
+    background-color: #3cb3ab;
+    color: #fff;
+    border: none;
+    border-radius: 33.5px;
+    outline: none;
+    &--outofstock {
+      background-color: rgba(47, 47, 47, 0.5);
+    }
+  }
+}
+
+.card {
+  text-align: center;
+  padding: 32px 0px;
+  &__item {
+    margin-bottom: 24px;
+  }
+  &__titel {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  &__info {
+    font-size: 0.875rem;
+    color: #7a7a7a;
+  }
+  &__seperator {
+    display: block;
+    @include centerContainer();
+    width: 80px;
+    height: 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  &__progress {
+    width: 279px;
+    height: 12px;
+    @include centerContainer();
+    background-color: rgba(151, 151, 151, 0.05);
+    border-radius: 33.5px;
+  }
+  &__bar {
+    height: inherit;
+    width: 80%;
+    background-color: #3cb3ab;
+    border-radius: 33.5px;
+  }
+}
