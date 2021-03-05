@@ -52,7 +52,7 @@
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
       <div class="main__footer">
-        <button>Back this project</button>
+        <button class="main__btn" id="main__btn">Back this project</button>
         <span><i class="fas fa-bookmark"></i></span>
       </div>
     </main>
@@ -139,10 +139,10 @@
         </section>
       </div>
     </section>
-
-    <section class="about about--selectionModal">
+<div class="selectionModalContainer" id="selectionModalContainer">
+    <section class="about about--selectionModal" id="selectionModal">
       <h2 class="about__titel">Back this project</h2>
-      <a href="#" class="about__close"
+      <a href="#" class="about__close" id="selectionModalClose"
         ><img src="images/icon-close-modal.svg" alt="icon close modal"
       /></a>
       <p class="about__p">
@@ -151,18 +151,20 @@
       </p>
       <div class="product product--selectionModel">
         <section class="product__card product__card--selectionModal">
-          <label class="product__radioContainer"
-            ><input
+          <label class="product__radioContainer">
+            <input
               type="radio"
               name="product"
-              id="product"
+              id="product_1"
               class="product__radio"
+             
             />
-            <span class="product__checkmark"></span>
-            <span class="product__titel product__titel--selectionModal"
-              >Pledge with no reward</span
-            ></label
-          >
+            <div class="product__descContainer">
+              <span class="product__titel product__titel--selectionModal"
+                >Pledge with no reward</span
+              >
+            </div>
+          </label>
 
           <p class="product__desc">
             Choose to support us without a reward if you simply believe in our
@@ -175,10 +177,9 @@
             ><input
               type="radio"
               name="product"
-              id="product"
-              class="product__radio"
+              id="product_2"
+              class="product__radio"               
             />
-            <span class="product__checkmark"></span>
             <div class="product__descContainer">
               <span class="product__titel product__titel--selectionModal">
                 Bamboo Stand </span
@@ -197,24 +198,33 @@
             <span class="product__digit product_digit--selectionModal">101</span
             >left
           </div>
+          
+          <div class="product__enter">
+            <div class="product__line"></div>
+            <p class="product__header">Enter your pledge</p>
+            <div class="product__pledgeContainer">
+              <input type="text" name="pledge" value="25" id="pledge" class="product__pledge">
+              <span class="product__dolar">$</span>
+            </div>            
+            <button class="product__continue">Continue</button>
+          </div>
         </section>
         <section class="product__card product__card--selectionModal">
           <label class="product__radioContainer"
             ><input
               type="radio"
               name="product"
-              id="product"
+              id="product_3"
               class="product__radio"
             />
-            <span class="product__checkmark"></span>
             <div class="product__descContainer">
               <span class="product__titel product__titel--selectionModal">
                 Black Edition Stand </span
               ><span class="product__info product__info--selectionModal"
                 >Pledge $75 or more
               </span>
-            </div></label
-          >
+            </div>
+          </label>
 
           <p class="product__desc">
             You get a Black Special Edition computer stand and a personal thank
@@ -231,18 +241,17 @@
             ><input
               type="radio"
               name="product"
-              id="product"
+              id="product_4"
               class="product__radio"
             />
-            <span class="product__checkmark"></span>
             <div class="product__descContainer">
               <span class="product__titel product__titel--selectionModal">
                 Mahogany Special Edition </span
               ><span class="product__info product__info--selectionModal"
                 >Pledge $200 or more
               </span>
-            </div></label
-          >
+            </div>
+          </label>
 
           <p class="product__desc">
             You get two Special Edition Mahogany stands, a Backer T-Shirt, and a
@@ -255,11 +264,12 @@
           </div>
         </section>
       </div>
+      </div>
       <div class="none" style="display: none">
         <!-- Selection modal start -->
 
         <!-- Selected pledge start -->
-        Enter your pledge $25 Continue
+        
         <!-- Selected pledge end -->
 
         <!-- Selected pledge start -->

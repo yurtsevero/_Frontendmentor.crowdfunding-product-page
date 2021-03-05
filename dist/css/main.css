@@ -226,6 +226,22 @@ section {
   right: 1.5rem;
 }
 
+.selectionModalContainer {
+  display: block;
+  position: absolute;
+  top: 0;
+  padding-top: 120px;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.selectionModalContainer.open {
+  display: block;
+}
+
 .product {
   width: 279px;
   font-size: 0.875rem;
@@ -243,6 +259,7 @@ section {
 
 .product__titel {
   font-weight: medium;
+  color: #000;
 }
 
 .product__titel--selectionModal {
@@ -259,6 +276,40 @@ section {
 .product__info--selectionModal {
   margin-left: 0.7rem;
   margin-bottom: 0;
+}
+
+.product__descContainer::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.product__descContainer::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #3cb3ab;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .product__desc {
@@ -303,26 +354,6 @@ section {
   background-color: rgba(47, 47, 47, 0.5);
 }
 
-.product__radio {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  outline: none;
-}
-
-.product__radio:active .product__radio__checkmark {
-  background-color: #3cb3ab;
-}
-
-.product__checkmark {
-  width: 17px;
-  height: 17px;
-  position: absolute;
-  border-radius: 50%;
-  background-color: #3cb3ab;
-}
-
 .product__radioContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -337,6 +368,75 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.product__radio {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: relative;
+}
+
+.product__radio:checked + .product__descContainer::after {
+  opacity: 1;
+}
+
+.product__enter {
+  display: none;
+  width: inherit;
+  text-align: center;
+  position: relative;
+  left: -25px;
+}
+
+.product__enter.open {
+  display: block;
+}
+
+.product__header {
+  margin-bottom: 1rem;
+}
+
+.product__pledgeContainer {
+  display: inline;
+  position: relative;
+}
+
+.product__pledge {
+  width: 100px;
+  height: 46px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 33.5px;
+  text-align: center;
+  outline: none;
+}
+
+.product__dolar {
+  position: absolute;
+  left: 25%;
+  top: 0;
+  opacity: 0.7;
+}
+
+.product__continue {
+  width: 115px;
+  height: 46px;
+  border-radius: 33.5px;
+  border: none;
+  background-color: #3cb3ab;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  margin-left: 0.7rem;
+}
+
+.product__line {
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .card {
@@ -387,5 +487,6 @@ body {
   margin: 0 auto;
   font-family: "Commissioner", sans-serif;
   background-color: #fafafa;
+  position: relative;
 }
 /*# sourceMappingURL=main.css.map */
