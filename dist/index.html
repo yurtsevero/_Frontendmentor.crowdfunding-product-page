@@ -23,6 +23,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/main.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Frontend Mentor | Crowdfunding product page</title>
   </head>
   <body>
@@ -171,6 +172,16 @@
             project. As a backer, you will be signed up to receive product
             updates via email.
           </p>
+          <div class="test"></div>
+          <div class="product__enter">       
+            <div class="product__line"></div>
+            <p class="product__header"></p>
+            <!-- <div class="product__pledgeContainer">
+              <input type="text" name="pledge" value="200" id="pledge0" class="product__pledge">
+              <span class="product__dolar">$</span> 
+            </div>             -->
+            <button class="product__continue">Continue</button>
+          </div>
         </section>
         <section class="product__card product__card--selectionModal">
           <label class="product__radioContainer"
@@ -203,7 +214,7 @@
             <div class="product__line"></div>
             <p class="product__header">Enter your pledge</p>
             <div class="product__pledgeContainer">
-              <input type="text" name="pledge" value="25" id="pledge" class="product__pledge">
+              <input type="text" name="pledge" value="25" id="pledge1" class="product__pledge">
               <span class="product__dolar">$</span>
             </div>            
             <button class="product__continue">Continue</button>
@@ -235,6 +246,15 @@
             <span class="product__digit product_digit--selectionModal">64</span
             >left
           </div>
+             <div class="product__enter">
+            <div class="product__line"></div>
+            <p class="product__header">Enter your pledge</p>
+            <div class="product__pledgeContainer">
+              <input type="text" name="pledge" value="75" id="pledge2" class="product__pledge">
+              <span class="product__dolar">$</span>
+            </div>            
+            <button class="product__continue">Continue</button>
+          </div>
         </section>
         <section class="product__card product__card--selectionModal">
           <label class="product__radioContainer"
@@ -262,35 +282,32 @@
             <span class="product__digit product_digit--selectionModal">0</span
             >left
           </div>
+             <div class="product__enter">
+            <div class="product__line"></div>
+            <p class="product__header">Enter your pledge</p>
+            <div class="product__pledgeContainer">
+              <input type="text" name="pledge" value="200" id="pledge3" class="product__pledge">
+              <span class="product__dolar">$</span>
+            </div>            
+            <button class="product__continue">Continue</button>
+          </div>
         </section>
       </div>
       </div>
-      <div class="none" style="display: none">
-        <!-- Selection modal start -->
+      <!-- Success modal start -->
 
-        <!-- Selected pledge start -->
-        
-        <!-- Selected pledge end -->
-
-        <!-- Selected pledge start -->
-        Enter your pledge $75 Continue
-        <!-- Selected pledge end -->
-
-        <!-- Selected pledge  start -->
-        Enter your pledge $200 Continue
-        <!-- Selected pledge end -->
-
-        <!-- Selection modal end -->
-
-        <!-- Success modal start -->
-
-        Thanks for your support! Your pledge brings us one step closer to
+      <div class="success" >
+       <section class="success__container">
+        <img src="images/icon-check.svg" alt="success icon" class="success__icon">
+        <h3 class="success__title">Thanks for your support!</h2>
+        <p class="success__desc">Your pledge brings us one step closer to
         sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an
-        email once our campaign is completed. Got it!
-
-        <!-- Success modal end -->
+        email once our campaign is completed.</p> 
+        <button class="success__btn ">Got it!</button>
+        </section>        
       </div>
-    </section>
+   
+    <!-- Success modal end -->
     <script src="./app/main.js"></script>
   </body>
 </html>

@@ -27,12 +27,12 @@ section {
   }
 }
 .selectionModalContainer {
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   padding-top: 120px;
   width: inherit;
-  height: inherit;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -52,6 +52,11 @@ section {
     width: inherit;
     &--outofstock {
       opacity: 0.5;
+    }
+    &--active {
+      border-width: 2px;
+      border-color: #3cb3ab;
+      box-shadow: 15px 15px 25px rgba(0, 0, 0, 0.15);
     }
   }
   &__titel {
@@ -125,6 +130,7 @@ section {
     border: none;
     border-radius: 33.5px;
     outline: none;
+
     &--outofstock {
       background-color: rgba(47, 47, 47, 0.5);
     }
@@ -168,6 +174,7 @@ section {
     border-radius: 33.5px;
     text-align: center;
     outline: none;
+    margin-right: 0.7rem;
   }
   &__dolar {
     position: absolute;
@@ -185,7 +192,6 @@ section {
     font-weight: bold;
     cursor: pointer;
     outline: none;
-    margin-left: 0.7rem;
   }
   &__line {
     margin-bottom: 24px;
