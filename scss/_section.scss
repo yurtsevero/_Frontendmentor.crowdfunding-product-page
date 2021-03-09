@@ -149,7 +149,9 @@ section {
       opacity: 1;
     }
   }
-
+  #pledge0 {
+    visibility: hidden;
+  }
   &__enter {
     display: none;
     width: inherit;
@@ -179,7 +181,8 @@ section {
   &__dolar {
     position: absolute;
     left: 25%;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     opacity: 0.7;
   }
   &__continue {
@@ -201,7 +204,7 @@ section {
 
 .card {
   text-align: center;
-  padding: 32px 0px;
+  padding: 2rem 0px;
   &__item {
     margin-bottom: 24px;
   }

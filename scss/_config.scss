@@ -26,3 +26,8 @@ li {
 a {
   text-decoration: none;
 }
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}

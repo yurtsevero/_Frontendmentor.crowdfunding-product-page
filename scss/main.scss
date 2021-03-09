@@ -4,12 +4,4 @@
 @import "main";
 @import "section";
 @import "selectionModal";
-
-body {
-  width: 375px;
-  height: 100%;
-  margin: 0 auto;
-  font-family: "Commissioner", sans-serif;
-  background-color: #fafafa;
-  position: relative;
-}
+@import "responsive";
