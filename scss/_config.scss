@@ -25,6 +25,10 @@ li {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+button {
+  cursor: pointer;
 }
 @mixin media-lg {
   @media screen and (min-width: 1024px) {

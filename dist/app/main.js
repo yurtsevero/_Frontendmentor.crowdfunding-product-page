@@ -5,44 +5,47 @@ const selectionModalContainer = document.getElementById(
   "selectionModalContainer"
 );
 const selectionModalClose = document.getElementById("selectionModalClose");
+const btnSelectReward = document.querySelectorAll(".product__button");
 
 const radio = document.querySelectorAll('input[name="product"]');
 radio.forEach((element) => {
   element.addEventListener("change", () => {
-    //Reset entered product
-    const productNotChecked = document.querySelectorAll(
-      'input[name="product"]:not(:checked)'
-    );
+    radioCheckedChange();
+  });
+});
+radioCheckedChange = () => {
+  //Reset entered product
+  const productNotChecked = document.querySelectorAll(
+    'input[name="product"]:not(:checked)'
+  );
 
-    productNotChecked.forEach((notCheckedElement) => {
-      try {
-        const productNCEnter =
-          notCheckedElement.parentElement.nextElementSibling.nextElementSibling
-            .nextElementSibling;
-        productNCEnter.classList.remove("open");
-      } catch (error) {
-        return;
-      }
-      const productNCCard = notCheckedElement.parentElement.parentElement;
-      productNCCard.classList.remove("product__card--active");
-    });
-
-    const productChecked = document.querySelector(
-      'input[name="product"]:checked'
-    );
+  productNotChecked.forEach((notCheckedElement) => {
     try {
-      const productEnter =
-        productChecked.parentElement.nextElementSibling.nextElementSibling
+      const productNCEnter =
+        notCheckedElement.parentElement.nextElementSibling.nextElementSibling
           .nextElementSibling;
-      productCard = productChecked.parentElement.parentElement;
-      productCard.classList.add("product__card--active");
-      productEnter.classList.add("open");
+      productNCEnter.classList.remove("open");
     } catch (error) {
       return;
     }
+    const productNCCard = notCheckedElement.parentElement.parentElement;
+    productNCCard.classList.remove("product__card--active");
   });
-});
 
+  const productChecked = document.querySelector(
+    'input[name="product"]:checked'
+  );
+  try {
+    const productEnter =
+      productChecked.parentElement.nextElementSibling.nextElementSibling
+        .nextElementSibling;
+    productCard = productChecked.parentElement.parentElement;
+    productCard.classList.add("product__card--active");
+    productEnter.classList.add("open");
+  } catch (error) {
+    return;
+  }
+};
 window.addEventListener("click", (e) => {
   if (e.target == document.getElementsByClassName("modal")[0]) {
     navMenu.classList.remove("open");
@@ -88,4 +91,17 @@ btnContinue.forEach((btn) => {
 const successBtn = document.getElementsByClassName("success__btn")[0];
 successBtn.addEventListener("click", () => {
   successModal.classList.remove("open");
+});
+
+btnSelectReward.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.scrollTo(0, 100);
+    selectionModalContainer.classList.toggle("open");
+
+    const checkBox = document.querySelector(
+      `input[id="${btn.value.toString()}"`
+    );
+    checkBox.checked = true;
+    radioCheckedChange();
+  });
 });
