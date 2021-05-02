@@ -133,6 +133,8 @@ section {
 
     &--outofstock {
       background-color: rgba(47, 47, 47, 0.5);
+      pointer-events: none;
+      cursor: disabled;
     }
   }
   &__radioContainer {
