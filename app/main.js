@@ -47,6 +47,7 @@ radioCheckedChange = () => {
   }
 };
 window.addEventListener("click", (e) => {
+	console.log("hey");
   if (e.target == document.getElementsByClassName("modal")[0]) {
     navMenu.classList.remove("open");
     hamburgerMenu.src = "images/icon-hamburger.svg";
