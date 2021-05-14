@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Screenshot
 
-https://github.com/yurtsevero/_Frontendmentor.crowdfunding-product-page/blob/master/images/Screenshot_Frontend%20Mentor%20Crowdfunding%20product%20page.png
+![](./images/screenshot.png)
 
 
 ### Links
